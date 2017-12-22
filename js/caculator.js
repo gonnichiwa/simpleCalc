@@ -7,8 +7,10 @@ function caculate(){
 	/* 
 
 	*/
-	var inputTag1 = Number(document.getElementById('input1').value);
-	var inputTag2 = Number(document.getElementById('input2').value);
+	var inputTag1 = getValueOfTag('inputTag1');
+	var inputTag2 = getValueOfTag('inputTag2');
+	// var inputTag1 = Number(document.getElementById('input1').value);
+	// var inputTag2 = Number(document.getElementById('input2').value);
 	var target = document.getElementById('operators');
 	var op = target.options[target.selectedIndex].value;
 	var numOp = Number(op);
