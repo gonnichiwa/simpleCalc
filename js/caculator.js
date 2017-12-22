@@ -1,38 +1,25 @@
-function plus(input1,input2){
-	var resultNumber = input1 + input2;
-	return resultNumber;
-}
-
 function caculate(){
-	/* 
+	var inputTag1 = getValueOfTag('input1');
+	var inputTag2 = getValueOfTag('input2');
+	var numOp = getOptionValue('operators');
 
-	*/
-	var inputTag1 = getValueOfTag('inputTag1');
-	var inputTag2 = getValueOfTag('inputTag2');
-	// var inputTag1 = Number(document.getElementById('input1').value);
-	// var inputTag2 = Number(document.getElementById('input2').value);
-	var target = document.getElementById('operators');
-	var op = getOptionValue(target);
-	// var op = target.options[target.selectedIndex].value;
-	var numOp = Number(op);
-	/*
+	// console.log("numOp : " + numOp);
+	// console.log("inputTag1 : " + inputTag1 + ", typeof : " + typeof inputTag1);
+	// console.log("inputTag2 : " + inputTag2 + ", typeof : " + typeof inputTag2);
 
-	*/
 	var result = 99999999999;
 	if(numOp == 1){
 		result = plus(inputTag1,inputTag2);
-	} else if (numOp == 2 ){
+		console.log("result in if : " + result);
+	} else if (numOp == 2){
 		result = minus(inputTag1,inputTag2);
-		// result = inputTag1 - inputTag2;
 	} else if (numOp == 3){
 		result = multiple(inputTag1,inputTag2);
-		// result = inputTag1 * inputTag2;
 	} else if (numOp == 4){
 		result = division(inputTag1,inputTag2);
-		// result = inputTag1 / inputTag2;
 	}
-	/**
 
-	*/
-	document.getElementById('result').innerHTML = result;
+	// console.log("result typeof : " + result);
+
+	printResult('result',result);
 }
