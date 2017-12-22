@@ -12,7 +12,8 @@ function caculate(){
 	// var inputTag1 = Number(document.getElementById('input1').value);
 	// var inputTag2 = Number(document.getElementById('input2').value);
 	var target = document.getElementById('operators');
-	var op = target.options[target.selectedIndex].value;
+	var op = getOptionValue(target);
+	// var op = target.options[target.selectedIndex].value;
 	var numOp = Number(op);
 	/*
 
