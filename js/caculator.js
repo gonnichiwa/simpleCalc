@@ -1,0 +1,6 @@
+
+
+
+function caculate(){
+	alert('caculate!');
+}
